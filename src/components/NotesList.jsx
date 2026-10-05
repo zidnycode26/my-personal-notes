@@ -3,7 +3,7 @@ import NoteItem from './NoteItem';
 
 function NotesList({ notes, onDelete, onArchive, dataTestId = 'notes-list' }) {
   // TODO [Basic] validasi notes agar tidak kosong.
-  const hasNotes = false; // update dengan nilai yang sesuai
+  const hasNotes = Array.isArray(notes) && notes.length > 0; // update dengan nilai yang sesuai
 
   if (!hasNotes) {
     return (
