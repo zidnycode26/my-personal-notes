@@ -12,7 +12,7 @@ function NotesList({ notes, onDelete, onArchive, dataTestId = 'notes-list' }) {
         <p
           className="notes-list__empty-message"
           data-testid={`${dataTestId}-empty`}
-        ></p>
+        >Tidak ada catatan</p>
       </div>
     );
   }
