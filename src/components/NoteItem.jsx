@@ -12,7 +12,7 @@ function NoteItem({ note, onDelete, onArchive }) {
         {/* TODO [Basic] tampilkan judul catatan menggunakan note.title */}
         {/* TODO [Advanced] sorot kata kunci pencarian dalam judul menggunakan elemen <mark>. */}
         <h3 className="note-item__title" data-testid="note-item-title">
-          Judul catatan
+          {note.title}
         </h3>
         {/* TODO [Basic] gunakan util showFormattedDate untuk menampilkan tanggal dibuat. */}
         <p className="note-item__date" data-testid="note-item-date">
