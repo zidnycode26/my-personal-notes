@@ -20,6 +20,14 @@ function NotesList({ notes, onDelete, onArchive, dataTestId = 'notes-list' }) {
   return (
     <div className="notes-list" data-testid={dataTestId}>
       {/* TODO [Basic] gunakan array.map untuk merender NoteItem untuk setiap catatan. */}
+      {notes.map((note) => (
+        <NoteItem
+        key={note.id}
+        note={note}
+        onDelete={onDelete}
+        onArchive={onArchive}
+        />
+      ))}
       {/* TODO [Skilled] ekstrak tombol aksi menjadi komponen reusable agar dipakai NoteItem. */}
       {/* TODO [Advanced] kelompokkan catatan per bulan-tahun dan render tiap grup dalam <section className="notes-group">. */}
     </div>
