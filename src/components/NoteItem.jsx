@@ -16,7 +16,7 @@ function NoteItem({ note, onDelete, onArchive }) {
         </h3>
         {/* TODO [Basic] gunakan util showFormattedDate untuk menampilkan tanggal dibuat. */}
         <p className="note-item__date" data-testid="note-item-date">
-          {new Date().toISOString()}
+          {showFormattedDate(note.createdAt)}
         </p>
         {/* TODO [Basic] tampilkan isi catatan dari note.body */}
         {/* TODO [Advanced] sorot kata kunci pencarian dalam isi menggunakan elemen <mark>. */}
