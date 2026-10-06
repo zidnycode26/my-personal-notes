@@ -1,5 +1,6 @@
 import React from 'react';
 import { showFormattedDate } from '../utils';
+import NoteActionButton from './NoteActionButton';
 
 function NoteItem({ note, onDelete, onArchive }) {
   return (
@@ -26,15 +27,13 @@ function NoteItem({ note, onDelete, onArchive }) {
       </div>
       <div className="note-item__action" data-testid="note-item-action">
         {/* TODO [Skilled] pecah tombol aksi menjadi komponen terpisah bernama `NoteActionButton` dengan menerima props `variant` dan `onClick` */}
-        <button
-          className="note-item__delete-button"
-          type="button"
+        <NoteActionButton
+          variant="delete"
           // TODO [Basic] panggil onDelete dengan id catatan.
           onClick={() => onDelete(note.id)}
-          data-testid="note-item-delete-button"
         >
           Delete
-        </button>
+        </NoteActionButton>
 
         {/* TODO [Advanced] implementasikan tombol arsip untuk fitur mengarsipkan catatan */}
       </div>
