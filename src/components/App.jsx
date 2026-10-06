@@ -30,8 +30,8 @@ class App extends React.Component {
           id:+new Date(),
           title,
           body,
-          createdAd: new Date().toISOString(),
-          archive: false,
+          createdAt: new Date().toISOString(),
+          archived: false,
         },
       ],
     }));

@@ -19,7 +19,7 @@ class NoteInput extends React.Component {
   onTitleChangeEventHandler(event) {
     // TODO [Basic] update state dengan nilai event.target.value.
     // TODO [Skilled] batasi judul maksimal 50 karakter dan tampilkan peringatan saat sisa karakter < 10.
-    this.setState({ title: event.target.value});
+    this.setState({ title: event.target.value.slice(0, 50)});
   }
 
   onBodyChangeEventHandler(event) {
