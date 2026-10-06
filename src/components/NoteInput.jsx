@@ -32,7 +32,13 @@ class NoteInput extends React.Component {
 
     // TODO [Basic] panggil props.addNote dengan data title & body dari state, lalu reset form.
     // TODO [Advanced] tolak submit ketika body kurang dari 10 karakter dan tampilkan pesan error.
-    console.warn('[TODO] Submit note', this.state);
+    this.props.addNote({
+      title: this.state.title,
+      body: this.state.body,
+    });
+    
+    this.setState({ title: '', body: '' });
+
   }
 
   render() {
