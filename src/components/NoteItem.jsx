@@ -36,6 +36,12 @@ function NoteItem({ note, onDelete, onArchive }) {
         </NoteActionButton>
 
         {/* TODO [Advanced] implementasikan tombol arsip untuk fitur mengarsipkan catatan */}
+        <NoteActionButton
+        variant="archive"
+        onClick={() => onArchive(note.id)}
+        >
+          {note.archived ? 'Pindahkan' : 'Arsipkan'}
+        </NoteActionButton>
       </div>
     </div>
   );
