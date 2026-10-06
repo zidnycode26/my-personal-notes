@@ -66,8 +66,12 @@ class App extends React.Component {
       note.title.toLowerCase().includes(searchKeyword.toLowerCase())
     );
     // TODO [Advanced] pisahkan catatan aktif dan arsip menggunakan array.filter, lalu urutkan berdasarkan tanggal terbaru.
-    const activeNotes = filteredNotes;
-    const archivedNotes = filteredNotes;
+    const activeNotes = filteredNotes
+    .filter((note) => !note.archived)
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    const archivedNotes = filteredNotes
+    .filter((note) => note.archived)
+    .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     return (
       <div className="note-app" data-testid="note-app">
