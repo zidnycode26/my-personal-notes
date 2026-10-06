@@ -58,7 +58,9 @@ class App extends React.Component {
     const { notes, searchKeyword } = this.state;
 
     // TODO [Skilled] filter catatan berdasarkan searchKeyword (case-insensitive).
-    const filteredNotes = notes;
+    const filteredNotes = notes.filter((note) =>
+      note.title.toLowerCase().includes(searchKeyword.toLowerCase())
+    );
     // TODO [Advanced] pisahkan catatan aktif dan arsip menggunakan array.filter, lalu urutkan berdasarkan tanggal terbaru.
     const activeNotes = filteredNotes;
     const archivedNotes = filteredNotes;
