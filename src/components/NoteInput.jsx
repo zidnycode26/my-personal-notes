@@ -53,6 +53,12 @@ class NoteInput extends React.Component {
         <h2>Buat catatan</h2>
 
         {/* // TODO [Advanced] tampilkan pesan error menggunakan elemen dengan class note-input__feedback--error. */}
+        {this.state.error && (
+          <p
+          className="note-input__feedback note-input__feedback--error"
+          data-testid="note-input-error"
+          >{this.state.error}</p>
+        )}
 
         <form
           onSubmit={this.onSubmitEventHandler}
