@@ -47,7 +47,10 @@ class App extends React.Component {
 
   onArchiveHandler(id) {
     // TODO [Advanced] gunakan array.map untuk toggle nilai archived catatan sesuai id dan pisahkan daftar aktif/arsip.
-    console.warn('[TODO] Implement onArchiveHandler', { id });
+    this.setState((prevState) => ({
+      notes: prevState.notes.map((note) =>
+      note.id === id ? {...note, archived: !note.archived} : note),
+    }));
   }
 
   onSearchHandler(keyword) {
