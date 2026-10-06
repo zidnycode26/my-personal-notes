@@ -24,7 +24,7 @@ class NoteInput extends React.Component {
 
   onBodyChangeEventHandler(event) {
     // TODO [Basic] update state body agar textarea menjadi controlled component.
-    console.warn('[TODO] Handle body change', event.target.value);
+    this.setState({body: event.target.value});
   }
 
   onSubmitEventHandler(event) {
