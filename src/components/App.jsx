@@ -23,7 +23,18 @@ class App extends React.Component {
   onAddNoteHandler({ title, body }) {
     // TODO [Basic] tambahkan catatan baru ke state.notes gunakan spread operator dan +new Date() sebagai id.
     // TODO [Advanced] setelah menambahkan, pastikan catatan baru muncul pada daftar aktif.
-    console.warn('[TODO] Implement onAddNoteHandler', { title, body });
+    this.setState((prevState) => ({
+      notes: [
+        ...prevState.notes,
+        {
+          id:+new Date(),
+          title,
+          body,
+          createdAd: new Date().toISOString(),
+          archive: false,
+        },
+      ],
+    }));
   }
 
   onDeleteHandler(id) {
