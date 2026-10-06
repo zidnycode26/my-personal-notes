@@ -2,6 +2,7 @@ import React from 'react';
 import { getInitialData } from '../utils';
 import NoteInput from './NoteInput';
 import NotesList from './NotesList';
+import NoteSearch from './NoteSearch';
 
 class App extends React.Component {
   constructor(props) {
@@ -69,6 +70,7 @@ class App extends React.Component {
       <div className="note-app" data-testid="note-app">
         <div className="note-app__header" data-testid="note-app-header">
           <h1>Notes</h1>
+          <NoteSearch keyword={searchKeyword} onSearch={this.onSearchHandler} />
         </div>
         <div className="note-app__body" data-testid="note-app-body">
           <NoteInput addNote={this.onAddNoteHandler} />
