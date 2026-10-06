@@ -41,7 +41,7 @@ class NoteInput extends React.Component {
 
   render() {
     // TODO [Skilled] hitung sisa karakter jika menerapkan limit 50 karakter.
-    const remainingChars = 100; // update dengan nilai yang sesuai
+    const remainingChars = 50 - this.state.title.length; // update dengan nilai yang sesuai
 
     return (
       <div className="note-input" data-testid="note-input">
