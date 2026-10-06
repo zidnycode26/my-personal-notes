@@ -21,7 +21,7 @@ function NoteItem({ note, onDelete, onArchive }) {
         {/* TODO [Basic] tampilkan isi catatan dari note.body */}
         {/* TODO [Advanced] sorot kata kunci pencarian dalam isi menggunakan elemen <mark>. */}
         <p className="note-item__body" data-testid="note-item-body">
-          Isi catatan muncul di sini.
+          {note.body}
         </p>
       </div>
       <div className="note-item__action" data-testid="note-item-action">
