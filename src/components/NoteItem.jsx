@@ -30,7 +30,7 @@ function NoteItem({ note, onDelete, onArchive }) {
           className="note-item__delete-button"
           type="button"
           // TODO [Basic] panggil onDelete dengan id catatan.
-          onClick={() => console.warn('[TODO] Delete note', note.id)}
+          onClick={() => onDelete(note.id)}
           data-testid="note-item-delete-button"
         >
           Delete
