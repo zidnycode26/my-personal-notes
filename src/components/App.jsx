@@ -12,6 +12,7 @@ class App extends React.Component {
       notes: getInitialData(),
 
       // TODO [Skilled] sediakan state untuk kata kunci pencarian.
+      searchKeyword: '',
     };
 
     this.onAddNoteHandler = this.onAddNoteHandler.bind(this);
