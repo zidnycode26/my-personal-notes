@@ -23,13 +23,13 @@ class App extends React.Component {
   onAddNoteHandler({ title, body }) {
     // TODO [Basic] tambahkan catatan baru ke state.notes gunakan spread operator dan +new Date() sebagai id.
     // TODO [Advanced] setelah menambahkan, pastikan catatan baru muncul pada daftar aktif.
-    const notes = this.state.notes.filter((note) => note.id != id);
-    this.setState({ notes });
+    console.warn('[TODO] Implement onAddNoteHandler', { title, body });
   }
 
   onDeleteHandler(id) {
     // TODO [Basic] gunakan array.filter untuk menghapus catatan berdasarkan id.
-    console.warn('[TODO] Implement onDeleteHandler', { id });
+    const notes = this.state.notes.filter((note) => note.id !== id);
+    this.setState({ notes });
   }
 
   onArchiveHandler(id) {
