@@ -51,7 +51,7 @@ class App extends React.Component {
 
   onSearchHandler(keyword) {
     // TODO [Skilled] simpan keyword ke state dan manfaatkan untuk memfilter catatan.
-    console.warn('[TODO] Implement onSearchHandler', { keyword });
+    this.setState({ searchKeyword: keyword});
   }
 
   render() {
