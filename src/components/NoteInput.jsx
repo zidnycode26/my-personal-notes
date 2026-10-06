@@ -8,7 +8,7 @@ class NoteInput extends React.Component {
       // TODO [Basic] kelola nilai title sebagai controlled input.
       title: '',
       // TODO [Basic] kelola nilai body sebagai controlled textarea.
-      body: ''
+      body: '',
     };
 
     this.onTitleChangeEventHandler = this.onTitleChangeEventHandler.bind(this);
@@ -32,11 +32,16 @@ class NoteInput extends React.Component {
 
     // TODO [Basic] panggil props.addNote dengan data title & body dari state, lalu reset form.
     // TODO [Advanced] tolak submit ketika body kurang dari 10 karakter dan tampilkan pesan error.
+    if (this.state.body.trim().length < 10) {
+      this.setState({error: 'Isi catatan minimal 10 karakter'});
+      return;
+    }
+
     this.props.addNote({
       title: this.state.title,
       body: this.state.body,
     }); 
-    this.setState({ title: '', body: '' });
+    this.setState({ title: '', body: '', error: '' });
   }
 
   render() {
